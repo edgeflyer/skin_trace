@@ -1,0 +1,11 @@
+# Copy this file to config.yaml and replace the placeholder credentials.
+# config.yaml is ignored by Git; keep real credentials out of this example.
+mysql:
+  # Match MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE and the host port in docker-compose.yml.
+  dsn: "app:change-me-app-password@tcp(127.0.0.1:3308)/lifeadmin?charset=utf8mb4&parseTime=True&loc=Local"
+
+deepseek:
+  base_url: "https://api.deepseek.com"
+  api_key: "YOUR_DEEPSEEK_API_KEY"
+  # Set this to a model available to your API account.
+  model: "deepseek-flash"

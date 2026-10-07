@@ -1,0 +1,25 @@
+# Copy this file to docker-compose.yml and replace both placeholder passwords.
+# Keep MYSQL_PASSWORD in sync with mysql.dsn in config.yaml.
+# Start MySQL with: docker compose up -d
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: skintrace-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "change-me-root-password"
+      MYSQL_DATABASE: lifeadmin
+      MYSQL_USER: app
+      MYSQL_PASSWORD: "change-me-app-password"
+    ports:
+      - "127.0.0.1:3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p\"$$MYSQL_ROOT_PASSWORD\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:
