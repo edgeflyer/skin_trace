@@ -1,0 +1,75 @@
+# Local configuration (database credentials and API keys)
+/config.yaml
+/config.yml
+/config.*.yaml
+/config.*.yml
+!/config.example.yaml
+!/config.example.yml
+/docker-compose*.yaml
+/docker-compose*.yml
+/compose.yaml
+/compose.yml
+/compose.override.yaml
+/compose.override.yml
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Credentials and private keys
+/secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# User uploads and local runtime data
+/uploads/
+/data/
+/mysql_data/
+/logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Go build, test and coverage output
+/bin/
+/build/
+/dist/
+/server
+/skintrace
+/skin_trace
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/coverage/
+/coverage*.txt
+/coverage*.html
+/go.work
+/go.work.sum
+
+# Local caches, temporary files and backups
+/.cache/
+/tmp/
+/temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Editor and operating system files
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
